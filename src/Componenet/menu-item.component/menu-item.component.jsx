@@ -3,7 +3,12 @@ import {
   useLocation,
   useNavigate,
   useParams,
+  
+  
+
 } from "react-router-dom";
+import {Route, Routes} from 'react-router-dom';
+
 
 import './menu-item.style.scss';
 import WithRouter from '../../Extra/homemadewithRouter';
@@ -24,17 +29,30 @@ import WithRouter from '../../Extra/homemadewithRouter';
 //      </div>
 //     </div>
 // ); 
+
+const GetNavigatevalue = (local,Url)=>{
+  let navvalue  = local+Url;  
+  let check = console.log (navvalue)
+  return(
+    navvalue
+  )
+    
+  
+}
+
 const Menuitem = ({ title, imageUrl, size, linkUrl }) => {
-  let location = useLocation();
-  let navigate = useNavigate ();
+
+  let navigate = useNavigate();
   //let history = useHistory();
   let params = useParams();
-  let localval = location.pathname ; 
-  
-  
+  let location = useLocation();
+  let localval = location.pathname;
+  let tempval ;
   return (
     
-    <div className={`${size} menu-item`} onClick={()=>{GetNavigatevalue( navigate ,localval,linkUrl)}}  >
+    <div className={`${size} menu-item`} onClick= {()=> {navigate(GetNavigatevalue (localval,linkUrl)); } } >
+     
+      
       <div
         className='backgroundImage'
         style = {{
@@ -45,22 +63,7 @@ const Menuitem = ({ title, imageUrl, size, linkUrl }) => {
         <h1 className='title'>{title.toUpperCase()}</h1>
         <span className='subtitle'>SHOP NOW</span>
       </div>
-    
     </div>
   )
 };
 export default Menuitem ;
-
-const GetNavigatevalue = (navigate, local, Url)=>{
-
-  let navvalue = `${local}` + Url;
-  let debug = console.log (navvalue)
-  let setnavigate = navigate( navvalue );
-   
-  return debug, setnavigate;
- 
-}
-const isTrue = ()=>{
-  const istrue = console.log ("True") ;
-  return istrue
-}

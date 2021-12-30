@@ -9,43 +9,40 @@ class Directory extends React.Component {
 
         this.state = {
             sections: [
-             {
-                id: 1,
-                title: "The First item",
-                imageUrl: "https://m.media-amazon.com/images/I/61HsuCgUz8L._AC_SX466_.jpg",
-                discription: "I am a discription",  /* these are the values set in the menu item boxes */
-                linkUrl: "firstItem"
-             },
-             {
-                id:2,
-                title: "The second item",
-                imageUrl: "https://m.media-amazon.com/images/I/61HsuCgUz8L._AC_SX466_.jpg",
-                discription: "I am a discription", 
-                linkUrl: "secondItem"
-             },
-             {
-                id:3,
-                title: "The third item",
-                imageUrl: "https://m.media-amazon.com/images/I/61HsuCgUz8L._AC_SX466_.jpg",
-                discription: "I am a discription" , 
-                linkUrl: "thirdItem"
-             },{
-                id: 4,
-                title: "The Forth item",
-                imageUrl: "https://m.media-amazon.com/images/I/61HsuCgUz8L._AC_SX466_.jpg",
-                size: "large",
-                discription: "I am a discription", 
-                linkUrl: "forthItem" 
-             },
-             {
-                id: 5 ,
-                title: "The Fifth item",                
-                imageUrl: "https://m.media-amazon.com/images/I/61HsuCgUz8L._AC_SX466_.jpg",
-                size: "large",
-                discription: "I am a discription", 
-                linkUrl: "fifthItem" 
-             },
+                {
+                    title: 'hats',
+                    imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                    id: 1,
+                    linkUrl: 'shop/hats'
+                  },
+                  {
+                    title: 'jackets',
+                    imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+                    id: 2,
+                    linkUrl: 'shop/jackets'
+                  },
+                  {
+                    title: 'sneakers',
+                    imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                    id: 3,
+                    linkUrl: 'shop/sneakers'
+                  },
+                  {
+                    title: 'womens',
+                    imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+                    size: 'large',
+                    id: 4,
+                    linkUrl: 'shop/womens'
+                  },
+                  {
+                    title: 'mens',
+                    imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+                    size: 'large',
+                    id: 5,
+                    linkUrl: 'shop/mens'
+                  }
             ]
+                
         } 
             
     
