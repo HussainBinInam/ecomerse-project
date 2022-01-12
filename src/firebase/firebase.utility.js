@@ -18,7 +18,7 @@ const config ={
   
 firebase.initializeApp(config);
   
-const auth = getAuth();
+export const auth = getAuth();
 const firebaseApp = firebase.initializeApp(config);
 export const Interesting = () => console.log("hmmmmm")
 
